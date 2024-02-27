@@ -52,4 +52,6 @@ names(data_4) <- gsub("-","_",names(data_4))
 ## 5th step
 
 data_5 <- data_4 %>% group_by(activity,subjectLabel) %>% select(-activityLabel) %>% summarize_all(mean)
+names(data_5) <- paste("mean",names(data_5),sep = "")
+data_5 <- rename(data_5,activity = meanactivity,subjectLabel = meansubjectLabel)
 write.table(data_5,file = "data_5.txt",row.names = FALSE)
