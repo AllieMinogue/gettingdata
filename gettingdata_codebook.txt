@@ -1,0 +1,37 @@
+Feature Selection 
+=================
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals TimeAcc-XYZ and TimeGyro-XYZ. These time domain signals (prefix 'time' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (TimeBodyAcc-XYZ and TimeGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (TimeBodyAccJerk-XYZ and TimeBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (TimeBodyAccMag, TimeGravityAccMag, TimeBodyAccJerkMag, TimeBodyGyroMag, TimeBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing FreqBodyAcc-XYZ, FreqBodyAccJerk-XYZ, FreqBodyGyro-XYZ, FreqBodyAccJerkMag, FreqBodyGyroMag, FreqBodyGyroJerkMag. (Note the 'Freq' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+TimeBodyAcc-XYZ
+TimeGravityAcc-XYZ
+TimeBodyAccJerk-XYZ
+TimeBodyGyro-XYZ
+TimeBodyGyroJerk-XYZ
+TimeBodyAccMag
+TimeGravityAccMag
+TimeBodyAccJerkMag
+TimeBodyGyroMag
+TimeBodyGyroJerkMag
+TimeBodyAcc-XYZ
+FreqBodyAccJerk-XYZ
+FreqBodyGyro-XYZ
+FreqBodyAccMag
+FreqBodyAccJerkMag
+FreqBodyGyroMag
+FreqBodyGyroJerkMag
+
+The set of variables that were estimated from these signals are: 
+
+mean: Mean value
+std: Standard deviation
+example: "TimeBodyAcc_mean_X", "TimeBodyAcc_std_X", "FreqBodyAcc_std_Y", "FreqBodyAccMag_std"
+
+The final data set (data_5) would have the prefix "mean" added to all of above variables, reflecting that all variables in such data set are means of the variables in raw data set (data_4). For example: "meanTimeBodyAcc_mean_X", "meanFreqBodyAcc_std_Y", "meanFreqBodyAccMag_std"
